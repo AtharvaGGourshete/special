@@ -20,10 +20,12 @@
             background-color: #ffebeb;
             font-family: Arial, sans-serif;
             text-align: center;
+            padding: 20px;
         }
         h1 {
             color: #d32f2f;
             margin-bottom: 20px;
+            font-family: 'Dancing Script', cursive;
         }
         .container {
             display: grid;
@@ -37,7 +39,6 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease-in-out;
-            
         }
         .card:hover {
             transform: translateY(-5px);
@@ -55,8 +56,7 @@
             width: auto;
             height: auto;
         }
-
-        .move-forward{
+        .move-forward {
             background-color: red;
             color: white;
             padding: 10px;
@@ -66,11 +66,31 @@
             align-items: center; 
             font-family: 'Dancing Script', cursive;
             border-radius: 10px;
-            font-size: x-large;          
+            font-size: x-large;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
         }
-
-        h1{
-            font-family: 'Dancing Script', cursive;
+        .move-forward:hover {
+            background-color: #b71c1c;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                max-width: 100%;
+            }
+            .move-forward {
+                font-size: large;
+                padding: 8px;
+            }
         }
     </style>
 </head>
@@ -85,7 +105,7 @@
         </div>
         <div class="card">
             <div class="date">24th October 2024</div>
-            <div class="message">We celebrated your Birthday at a place where we almost caught making out. 🤣</div>
+            <div class="message">We celebrated your Birthday at a place where we almost got caught making out. 🤣</div>
         </div>
         <div class="card">
             <div class="date">5th November 2024</div>
@@ -93,7 +113,7 @@
         </div>
         <div class="card">
             <div class="date">17th November 2024</div>
-            <div class="message">You were the first one to wish me after my parents. It made me feel so special and I FUCKING LOVE YOU FOR THAT. 😘</div>
+            <div class="message">You were the first one to wish me after my parents. It made me feel so special and I LOVE YOU FOR THAT. 😘</div>
         </div>
         <div class="card">
             <div class="date">30th November 2024</div>
@@ -101,7 +121,7 @@
         </div>
         <div class="card">
             <div class="date">14th December to 7th January</div>
-            <div class="message">Yeah I know this time period was a bit difficult for us. Plans Made. Plans Cancelled. But okay, I get it you weren't in a state to go out on a date/dayout with me. And I felt so guilty about it when I got to knwo the reason. I'm sorry for that dear. I didn't mean it though.....</div>
+            <div class="message">Yeah I know this time period was a bit difficult for us. Plans Made. Plans Cancelled. But okay, I get it you weren't in a state to go out on a date with me. And I felt so guilty about it when I got to know the reason. I'm sorry for that dear.</div>
         </div>
         <div class="card">
             <div class="date">20th January 2025</div>
@@ -113,15 +133,16 @@
         </div>
         <div class="card">
             <div class="date">6th January 2025</div>
-            <div class="message"><h2>Offiicial 'Yes' from my GIRL</h2><h1>💖</h1></div>
+            <div class="message"><h2>Official 'Yes' from my GIRL</h2><h1>💖</h1></div>
         </div>
         <div class="card">
             <div class="date">8th February 2025</div>
-            <div class="message">Our results came out. Watching you achieve what you wanted made me forget to celebrate mine. But yeah I was genuinely happy and proud of you as I have seen those sleepeless nights where my girl didn't gave up on maths and kept on trying again and again.</div>
+            <div class="message">Our results came out. Watching you achieve what you wanted made me forget to celebrate mine. But yeah I was genuinely happy and proud of you as I have seen those sleepless nights where my girl didn't give up on math and kept on trying again and again.</div>
         </div>
-        <button class="move-forward" onclick="goBack()" type="button">Go back to re-initiate the love</button>
-        <button class="move-forward" onclick="moveForward()" type="button">Move Forward for more love</button>
     </div>
+    <button class="move-forward" onclick="goBack()" type="button">Go back to re-initiate the love</button>
+    <button class="move-forward" onclick="moveForward()" type="button">Move Forward for more love</button>
+
     <script>
         function goBack() {
             window.location.href = "/";

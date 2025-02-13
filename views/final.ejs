@@ -13,12 +13,22 @@
     <style>
       body {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
         background-color: #ffebeb;
         font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
       }
+
+      h1 {
+        font-family: "Dancing Script", cursive;
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+
       .envelope {
         position: relative;
         width: 200px;
@@ -31,6 +41,7 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         cursor: pointer;
       }
+
       .envelope::before {
         content: "";
         position: absolute;
@@ -40,10 +51,8 @@
         border-left: 100px solid transparent;
         border-right: 100px solid transparent;
         border-bottom: 75px solid #b71c1c;
-        display: flex;
-        justify-content: center;
-        align-items: center;
       }
+
       .envelope::after {
         content: "";
         position: absolute;
@@ -53,10 +62,8 @@
         border-left: 100px solid transparent;
         border-right: 100px solid transparent;
         border-top: 75px solid #b71c1c;
-        display: flex;
-        justify-content: center;
-        align-items: center;
       }
+
       .card {
         position: absolute;
         width: 160px;
@@ -73,9 +80,11 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s ease-in-out;
       }
+
       .card:hover {
         transform: translateY(-10px);
       }
+
       .open-button {
         margin-top: 10px;
         padding: 8px 15px;
@@ -86,6 +95,7 @@
         cursor: pointer;
         font-size: 16px;
       }
+
       .open-button:hover {
         background: #b71c1c;
       }
@@ -95,6 +105,7 @@
         text-align: center;
         justify-content: center;
       }
+
       .container2 {
         display: flex;
         text-align: center;
@@ -102,8 +113,59 @@
         align-items: center;
       }
 
-      h1{
-        font-family: 'Dancing Script', cursive;
+      /* Media Queries for Small Devices (Mobile) */
+      @media screen and (max-width: 600px) {
+        h1 {
+          font-size: 24px;
+          padding: 10px;
+        }
+
+        .envelope {
+          width: 150px;
+          height: 110px;
+        }
+
+        .envelope::before {
+          border-left: 75px solid transparent;
+          border-right: 75px solid transparent;
+          border-bottom: 55px solid #b71c1c;
+        }
+
+        .envelope::after {
+          border-left: 75px solid transparent;
+          border-right: 75px solid transparent;
+          border-top: 55px solid #b71c1c;
+        }
+
+        .card {
+          width: 120px;
+          height: 80px;
+          font-size: 14px;
+        }
+
+        .open-button {
+          font-size: 14px;
+          padding: 6px 12px;
+        }
+      }
+
+      /* Media Queries for Medium Devices (Tablets) */
+      @media screen and (max-width: 1024px) {
+        h1 {
+          font-size: 28px;
+          padding: 15px;
+        }
+
+        .envelope {
+          width: 180px;
+          height: 130px;
+        }
+
+        .card {
+          width: 140px;
+          height: 90px;
+          font-size: 16px;
+        }
       }
     </style>
   </head>
@@ -112,5 +174,6 @@
       Happy Valentine's Day Sweetheart. Thank You for being a part of my
       journey. 💖
     </h1>
+    
   </body>
 </html>

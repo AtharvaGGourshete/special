@@ -20,6 +20,23 @@
             font-family: Arial, sans-serif;
             font-family: 'Dancing Script', cursive;
         }
+        .headline {
+            font-size: 24px;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .container {
+            max-width: 800px;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .container2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+        }
         .envelope {
             position: relative;
             width: 200px;
@@ -31,7 +48,6 @@
             align-items: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             cursor: pointer;
-            
         }
         .envelope::before {
             content: "";
@@ -42,10 +58,6 @@
             border-left: 100px solid transparent;
             border-right: 100px solid transparent;
             border-bottom: 75px solid #b71c1c;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
         }
         .envelope::after {
             content: "";
@@ -56,9 +68,6 @@
             border-left: 100px solid transparent;
             border-right: 100px solid transparent;
             border-top: 75px solid #b71c1c;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
         .card {
             position: absolute;
@@ -93,36 +102,59 @@
             background: #b71c1c;
         }
 
-        .container{
-            display: block;
-            text-align: center;
-            justify-content: center;
+        @media only screen and (max-width: 600px) {
+            .headline {
+                font-size: 20px;
+            }
+            .container {
+                padding: 0 10px;
+            }
+            .envelope {
+                width: 150px;
+                height: 120px;
+            }
+            .card {
+                width: 130px;
+                height: 80px;
+                font-size: 16px;
+            }
         }
-        .container2{
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
+
+        @media only screen and (min-width: 601px) and (max-width: 800px) {
+            .headline {
+                font-size: 22px;
+            }
+            .container {
+                padding: 0 15px;
+            }
+            .envelope {
+                width: 180px;
+                height: 140px;
+            }
+            .card {
+                width: 150px;
+                height: 90px;
+                font-size: 17px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-    <h1 class="headline">Hey Miss Sarakshi, yeah its me your boyfriend😄. I know this is a bit surprising for you but I got something for you this valentine. I hope you find this message well</h1>
-    <div class="container2">
-    <div class="envelope" onclick="openMessagePage()">
-        <div class="card">
-            Open Me ❤️
-            <button class="open-button" type="button">Open</button>
+        <h1 class="headline">Hey Miss Sarakshi, yeah its me your boyfriend😄. I know this is a bit surprising for you but I got something for you this valentine. I hope you find this message well</h1>
+        <div class="container2">
+            <div class="envelope" onclick="openMessagePage()">
+                <div class="card">
+                    Open Me ❤️
+                    <button class="open-button" type="button">Open</button>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
     <script>
         function openMessagePage() {
             window.location.href = "/message";
         }
     </script>
-
 </body>
 </html>
