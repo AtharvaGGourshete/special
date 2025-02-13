@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Special Dates</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #ffebeb;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #d32f2f;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 600px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .date {
+            font-size: 18px;
+            font-weight: bold;
+            color: #d32f2f;
+            font-family: 'Dancing Script', cursive;
+        }
+        .message {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #444;
+            width: auto;
+            height: auto;
+        }
+
+        .move-forward{
+            background-color: red;
+            color: white;
+            padding: 10px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center; 
+            font-family: 'Dancing Script', cursive;
+            border-radius: 10px;
+            font-size: x-large;          
+        }
+
+        h1{
+            font-family: 'Dancing Script', cursive;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Our Special Moments ❤️</h1>
+
+    <div class="container">
+        <div class="card">
+            <div class="date">5th October 2024</div>
+            <div class="message">The day where I first had a good conversation with you and even got your number😁</div>
+        </div>
+        <div class="card">
+            <div class="date">24th October 2024</div>
+            <div class="message">We celebrated your Birthday at a place where we almost caught making out. 🤣</div>
+        </div>
+        <div class="card">
+            <div class="date">5th November 2024</div>
+            <div class="message">I confessed my love for you to Yadnesh where we cleared some stuff.</div>
+        </div>
+        <div class="card">
+            <div class="date">17th November 2024</div>
+            <div class="message">You were the first one to wish me after my parents. It made me feel so special and I FUCKING LOVE YOU FOR THAT. 😘</div>
+        </div>
+        <div class="card">
+            <div class="date">30th November 2024</div>
+            <div class="message"><h3>Our First Pizza Date (Unofficial tho 👀)</h3></div>
+        </div>
+        <div class="card">
+            <div class="date">14th December to 7th January</div>
+            <div class="message">Yeah I know this time period was a bit difficult for us. Plans Made. Plans Cancelled. But okay, I get it you weren't in a state to go out on a date/dayout with me. And I felt so guilty about it when I got to knwo the reason. I'm sorry for that dear. I didn't mean it though.....</div>
+        </div>
+        <div class="card">
+            <div class="date">20th January 2025</div>
+            <div class="message">My official proposal. That day was very overwhelming for me. I got to propose my girl whom I wanted to.</div>
+        </div>
+        <div class="card">
+            <div class="date">28th January 2025</div>
+            <div class="message">We won our first hackathon and yes, major credit goes to you. You have been my lucky charm sweetheart since then.</div>
+        </div>
+        <div class="card">
+            <div class="date">6th January 2025</div>
+            <div class="message"><h2>Offiicial 'Yes' from my GIRL</h2><h1>💖</h1></div>
+        </div>
+        <div class="card">
+            <div class="date">8th February 2025</div>
+            <div class="message">Our results came out. Watching you achieve what you wanted made me forget to celebrate mine. But yeah I was genuinely happy and proud of you as I have seen those sleepeless nights where my girl didn't gave up on maths and kept on trying again and again.</div>
+        </div>
+        <button class="move-forward" onclick="goBack()" type="button">Go back to re-initiate the love</button>
+        <button class="move-forward" onclick="moveForward()" type="button">Move Forward for more love</button>
+    </div>
+    <script>
+        function goBack() {
+            window.location.href = "/";
+        }
+        function moveForward() {
+            window.location.href = "/finalmsg";
+        }
+    </script>
+</body>
+</html>
